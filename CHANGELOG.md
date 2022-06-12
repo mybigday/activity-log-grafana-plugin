@@ -13,8 +13,3 @@
 *  correct plugin id (eaab400f)
 *  fix commit linter (f040e16b)
 
-# Changelog
-
-## 1.0.0 (Unreleased)
-
-Initial release.
