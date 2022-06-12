@@ -14,24 +14,24 @@ BRICKS Activity Log as Grafana Data Source
 
     a. Build plugin in development mode or run in watch mode
 
-        ```bash
-        yarn dev
-        ```
+    ```bash
+    yarn dev
+    ```
 
         or
 
-        ```bash
-        yarn watch
-        ```
+    ```bash
+    yarn watch
+    ```
 
     b. Start local Grafana for development
 
-        ```bash
-        docker-compose up
+    ```bash
+    docker-compose up
 
-        # URL: http://localhost:3000
-        # Default user and password are admin
-        ```
+    # URL: http://localhost:3000
+    # Default user and password are admin
+    ```
 
 3. Build plugin in production mode
 
