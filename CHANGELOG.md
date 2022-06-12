@@ -1,3 +1,10 @@
+#### 1.0.1.2 (2022-06-12)
+
+##### Bug Fixes
+
+*  correct plugin id (eaab400f)
+*  fix commit linter (f040e16b)
+
 # Changelog
 
 ## 1.0.0 (Unreleased)
