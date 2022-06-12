@@ -1,0 +1,30 @@
+{
+  "name": "bricks-activity-log-grafana-plugin",
+  "version": "1.0.0",
+  "description": "BRICKS Activity Log integration and data source",
+  "scripts": {
+    "build": "grafana-toolkit plugin:build",
+    "test": "grafana-toolkit plugin:test",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "sign": "grafana-toolkit plugin:sign",
+    "start": "yarn watch",
+    "lint": "eslint src --ext .tsx,.ts",
+    "lint:fix": "yarn run lint --fix",
+    "prettier": "prettier --list-different \"**/*.{ts,tsx,scss}\"",
+    "prettier:fix": "yarn run prettier --write"
+  },
+  "author": "BRICKS <dev@bricks.tools>",
+  "license": "MIT",
+  "devDependencies": {
+    "@grafana/data": "latest",
+    "@grafana/toolkit": "latest",
+    "@grafana/runtime": "latest",
+    "@grafana/ui": "latest",
+    "@testing-library/jest-dom": "5.4.0",
+    "@testing-library/react": "^10.0.2"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

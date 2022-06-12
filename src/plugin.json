@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "BRICKS Activity Log",
+  "id": "bricks-activity-log-grafana-plugin",
+  "metrics": true,
+  "logs": true,
+  "category": "cloud",
+  "info": {
+    "description": "BRICKS Activity Log integration and data source",
+    "author": {
+      "name": "BRICKS DAG INC.",
+      "url": "https://bricks.tools/"
+    },
+    "keywords": [
+      "BRICKS",
+      "log"
+    ],
+    "logos": {
+      "small": "img/logo.png",
+      "large": "img/logo.png"
+    },
+    "links": [
+      {
+        "name": "BRICKS",
+        "url": "https://bricks.tools"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/mybigday/activity-log-grafana-plugin"
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=7.0.0",
+    "plugins": []
+  },
+  "routes": [
+    {
+      "path": "api",
+      "url": "{{ .JsonData.site }}/api/v1/{{ .JsonData.workspaceId }}",
+      "headers": [
+        {
+          "name": "Authorization",
+          "content": "Bearer {{ .SecureJsonData.authToken }}"
+        }
+      ]
+    },
+    {
+      "path": "auth",
+      "url": "{{ .JsonData.site }}/auth"
+    }
+  ]
+}
