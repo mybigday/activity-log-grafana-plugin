@@ -12,17 +12,24 @@
     "lint": "eslint src --ext .tsx,.ts",
     "lint:fix": "yarn run lint --fix",
     "prettier": "prettier --list-different \"**/*.{ts,tsx,scss}\"",
-    "prettier:fix": "yarn run prettier --write"
+    "prettier:fix": "yarn run prettier --write",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version --major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version --minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version --patch && git push origin && git push origin --tags"
   },
   "author": "BRICKS <dev@bricks.tools>",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "@grafana/data": "latest",
-    "@grafana/toolkit": "latest",
     "@grafana/runtime": "latest",
+    "@grafana/toolkit": "latest",
     "@grafana/ui": "latest",
     "@testing-library/jest-dom": "5.4.0",
-    "@testing-library/react": "^10.0.2"
+    "@testing-library/react": "^10.0.2",
+    "generate-changelog": "^1.8.0",
+    "husky": "^8.0.1"
   },
   "engines": {
     "node": ">=14"
