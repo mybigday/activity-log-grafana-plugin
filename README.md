@@ -1,5 +1,7 @@
 # BRICKS Activity Log for Grafana
 
+[![CI](https://github.com/mybigday/activity-log-grafana-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/mybigday/activity-log-grafana-plugin/actions/workflows/ci.yml)
+
 Integrite BRICKS Activity Log as Grafana Data Source.
 
 ## Contributing
