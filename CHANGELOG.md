@@ -1,3 +1,18 @@
+### 1.1.0 (2022-06-13)
+
+##### New Features
+
+* **QueryEditor:**  change to SegmentInput if not selectable (5afbf1d4)
+* **config:**  change to select-input on site option (2c86ce76)
+
+##### Bug Fixes
+
+* **QueryEditor:**  segment label should auto size (41e285de)
+
+##### Code Style Changes
+
+*  add KeyValueSegment props type define (155e20e3)
+
 #### 1.0.1 (2022-06-12)
 
 ##### Documentation Changes
