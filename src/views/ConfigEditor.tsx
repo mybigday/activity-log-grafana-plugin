@@ -15,7 +15,7 @@ interface State {}
 const publicSites = [
   { label: 'Production', value: 'https://activity.bricks.tools' },
   { label: 'Beta', value: 'https://activity-beta.bricks.tools' },
-]
+];
 
 export class ConfigEditor extends PureComponent<Props, State> {
   loginWindow?: Window | null;
@@ -100,7 +100,7 @@ export class ConfigEditor extends PureComponent<Props, State> {
             label="Site"
             labelWidth={12}
             inputWidth={24}
-            inputEl={(
+            inputEl={
               <Select
                 onChange={this.onSiteChange}
                 options={publicSites}
@@ -108,7 +108,7 @@ export class ConfigEditor extends PureComponent<Props, State> {
                 placeholder="BRICKS Site"
                 allowCustomValue
               />
-            )}
+            }
           />
         </div>
 
