@@ -13,9 +13,10 @@
     "lint:fix": "yarn run lint --fix",
     "prettier": "prettier --list-different \"**/*.{ts,tsx,scss}\"",
     "prettier:fix": "yarn run prettier --write",
-    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --major && git push origin && git push origin --tags",
-    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --minor && git push origin && git push origin --tags",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --patch && git push origin && git push origin --tags"
+    "make-changelog": "changelog -x ci,test,docs,chore",
+    "release:major": "yarn make-changelog -M && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --major && git push origin && git push origin --tags",
+    "release:minor": "yarn make-changelog -m && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --minor && git push origin && git push origin --tags",
+    "release:patch": "yarn make-changelog -p && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --patch && git push origin && git push origin --tags"
   },
   "author": "BRICKS <dev@bricks.tools>",
   "license": "MIT",
