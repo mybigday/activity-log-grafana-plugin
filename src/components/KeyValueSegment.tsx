@@ -34,8 +34,8 @@ const KeyValueSegment: FC<Props> = ({ label, onChange, maps, values }: Props) =>
         <SegmentSection label={index === 0 ? label : ''} key={index}>
           {/* @ts-ignore */}
           <InlineSegmentGroup>
-            {maps.map(({ label: fieldLabel, key, options, required, width, custom }) => (
-              <InlineLabel width={width || 18} as="div" key={key}>
+            {maps.map(({ label: fieldLabel, key, options, required, custom }) => (
+              <InlineLabel width="auto" as="div" key={key}>
                 <span>{fieldLabel}:</span>
                 <Segment
                   key={index}

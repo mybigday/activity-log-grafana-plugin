@@ -109,9 +109,9 @@ export const QueryEditor: ComponentType<Props> = ({ datasource, onChange, onRunQ
         label="Filter"
         values={filter}
         maps={[
-          { label: 'Field', width: 24, key: 'key', options: dbCommonFields, custom: true, required: true },
+          { label: 'Field', key: 'key', options: dbCommonFields, custom: true, required: true },
           { label: 'Oprtator', key: 'operator', options: toOption(Operator), required: true },
-          { label: 'Value', width: 20, key: 'value', required: true },
+          { label: 'Value', key: 'value', required: true },
         ]}
         onChange={(values) => setFilter(values)}
       />
