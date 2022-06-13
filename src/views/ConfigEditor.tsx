@@ -1,7 +1,8 @@
 import React, { MouseEvent, ChangeEvent, PureComponent } from 'react';
-import { Button, LegacyForms } from '@grafana/ui';
-import { DataSourcePluginOptionsEditorProps } from '@grafana/data';
+import { Select, Button, LegacyForms } from '@grafana/ui';
+import { DataSourcePluginOptionsEditorProps, SelectableValue } from '@grafana/data';
 import { ActivityLogOptions, ActivityLogSecureOptions } from '../types';
+import { toSelection } from '../utils/select';
 
 const { SecretFormField, FormField } = LegacyForms;
 
@@ -11,14 +12,28 @@ interface Props extends DataSourcePluginOptionsEditorProps<ActivityLogOptions> {
 
 interface State {}
 
+const publicSites = [
+  { label: 'Production', value: 'https://activity.bricks.tools' },
+  { label: 'Beta', value: 'https://activity-beta.bricks.tools' },
+]
+
 export class ConfigEditor extends PureComponent<Props, State> {
   loginWindow?: Window | null;
 
-  onValueChange = (key: string) => (event: ChangeEvent<HTMLInputElement>) => {
+  onSiteChange = (value: SelectableValue<string>) => {
     const { onOptionsChange, options } = this.props;
     const jsonData = {
       ...options.jsonData,
-      [key]: event.target.value,
+      site: value.value,
+    };
+    onOptionsChange({ ...options, jsonData });
+  };
+
+  onWorkspaceChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { onOptionsChange, options } = this.props;
+    const jsonData = {
+      ...options.jsonData,
+      workspaceId: event.target.value,
     };
     onOptionsChange({ ...options, jsonData });
   };
@@ -85,9 +100,15 @@ export class ConfigEditor extends PureComponent<Props, State> {
             label="Site"
             labelWidth={12}
             inputWidth={24}
-            onChange={this.onValueChange('site')}
-            value={jsonData.site || defaultSiteUrl}
-            placeholder="BRICKS Site"
+            inputEl={(
+              <Select
+                onChange={this.onSiteChange}
+                options={publicSites}
+                value={toSelection(jsonData.site || defaultSiteUrl, publicSites)}
+                placeholder="BRICKS Site"
+                allowCustomValue
+              />
+            )}
           />
         </div>
 
@@ -96,7 +117,7 @@ export class ConfigEditor extends PureComponent<Props, State> {
             label="Workspace ID"
             labelWidth={12}
             inputWidth={24}
-            onChange={this.onValueChange('workspaceId')}
+            onChange={this.onWorkspaceChange}
             value={jsonData.workspaceId || ''}
             placeholder="BRICKS Workspace ID"
           />

@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Segment, Icon, SegmentSection, InlineSegmentGroup, InlineLabel } from '@grafana/ui';
+import { toSelection } from '../utils/select';
 
 interface Props {
   label: string;
@@ -7,8 +8,6 @@ interface Props {
   maps: any[];
   values: any[];
 }
-
-const toSelection = (value: any, options: any[]) => options?.find?.((opt: any) => opt.value === value) || value;
 
 const KeyValueSegment: FC<Props> = ({ label, onChange, maps, values }: Props) => {
   const displayValues: any[] = React.useMemo(() => [...values, {}], [values]);
