@@ -1,6 +1,10 @@
 # BRICKS Activity Log for Grafana
 
-BRICKS Activity Log as Grafana Data Source
+Integrite BRICKS Activity Log as Grafana Data Source.
+
+## Contributing
+
+Follows [conventional commits](https://www.conventionalcommits.org/).
 
 ## Getting started
 
