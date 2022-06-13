@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Segment, Icon, SegmentSection, InlineSegmentGroup, InlineLabel } from '@grafana/ui';
+import { Segment, Icon, SegmentSection, InlineSegmentGroup, InlineLabel, SegmentInput } from '@grafana/ui';
 import { SelectableValue } from '@grafana/data';
 import { toSelection } from '../utils/select';
 
@@ -46,16 +46,30 @@ const KeyValueSegment: FC<Props> = ({ label, onChange, maps, values }: Props) =>
             {maps.map(({ label: fieldLabel, key, options, required, custom }) => (
               <InlineLabel width="auto" as="div" key={key}>
                 <span>{fieldLabel}:</span>
-                <Segment
-                  key={index}
-                  allowCustomValue={custom}
-                  options={options}
-                  placeholder={required ? '(required)' : '(optional)'}
-                  value={toSelection(value[key], options)}
-                  onChange={(item) => {
-                    putItem(index, { ...value, [key]: item.value });
-                  }}
-                />
+                {
+                  options
+                    ? (
+                      <Segment
+                        key={index}
+                        allowCustomValue={custom}
+                        options={options}
+                        placeholder={required ? '(required)' : '(optional)'}
+                        value={toSelection(value[key], options)}
+                        onChange={(item) => {
+                          putItem(index, { ...value, [key]: item.value });
+                        }}
+                      />
+                    ) : (
+                      <SegmentInput
+                        key={index}
+                        placeholder={required ? '(required)' : '(optional)'}
+                        value={value[key]}
+                        onChange={(val) => {
+                          putItem(index, { ...value, [key]: val });
+                        }}
+                      />
+                    )
+                }
               </InlineLabel>
             ))}
             {index < values.length && (
