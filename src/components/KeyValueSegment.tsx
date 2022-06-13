@@ -1,12 +1,21 @@
 import React, { FC } from 'react';
 import { Segment, Icon, SegmentSection, InlineSegmentGroup, InlineLabel } from '@grafana/ui';
+import { SelectableValue } from '@grafana/data';
 import { toSelection } from '../utils/select';
+
+interface KeyOptions {
+  label: string;
+  key: string;
+  options?: Array<SelectableValue<any>>;
+  custom?: boolean;
+  required?: boolean;
+}
 
 interface Props {
   label: string;
   onChange?(values: any[]): void;
-  maps: any[];
-  values: any[];
+  maps: Array<KeyOptions>;
+  values: Array<any>;
 }
 
 const KeyValueSegment: FC<Props> = ({ label, onChange, maps, values }: Props) => {

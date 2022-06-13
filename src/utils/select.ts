@@ -1,2 +1,4 @@
-export const toSelection = (value: any, options: any[]) =>
-  options?.find?.((opt: any) => opt.value === value) || value;
+import { SelectableValue } from '@grafana/data';
+
+export const toSelection = (value: any, options?: Array<SelectableValue<any>>) =>
+  options?.find?.((opt: SelectableValue<any>) => opt.value === value) || value;
