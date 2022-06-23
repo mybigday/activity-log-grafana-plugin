@@ -1,3 +1,9 @@
+#### 1.1.2 (2022-06-23)
+
+##### Bug Fixes
+
+*  correct screenshots path (b0eb412a)
+
 #### 1.1.1 (2022-06-23)
 
 ##### Documentation Changes
