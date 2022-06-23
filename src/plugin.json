@@ -31,10 +31,10 @@
       }
     ],
     "screenshots": [
-      { "name": "Config", "path": "src/img/screenshot/1.png" },
-      { "name": "Event Count", "path": "src/img/screenshot/2.png" },
-      { "name": "LocalSync Latency", "path": "src/img/screenshot/3.png" },
-      { "name": "Event Log With Filter", "path": "src/img/screenshot/4.png" }
+      { "name": "Config", "path": "img/screenshot/1.png" },
+      { "name": "Event Count", "path": "img/screenshot/2.png" },
+      { "name": "LocalSync Latency", "path": "img/screenshot/3.png" },
+      { "name": "Event Log With Filter", "path": "img/screenshot/4.png" }
     ],
     "version": "%VERSION%",
     "updated": "%TODAY%"
