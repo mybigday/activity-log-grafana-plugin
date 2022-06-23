@@ -1,93 +1,22 @@
 # BRICKS Activity Log for Grafana
 
-[![CI](https://github.com/mybigday/activity-log-grafana-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/mybigday/activity-log-grafana-plugin/actions/workflows/ci.yml)
+This is datasource plugin for Grafana that can be used to visualize data from [BRICKS](https://bricks.tools) Activity Log.
 
-Integrite BRICKS Activity Log as Grafana Data Source.
+![Grafana configure](https://raw.githubusercontent.com/mybigday/activity-log-grafana-plugin/master/src/img/screenshot/1.png)
 
-## Contributing
+![Grafana dashboard](https://raw.githubusercontent.com/mybigday/activity-log-grafana-plugin/master/src/img/screenshot/4.png)
 
-Follows [conventional commits](https://www.conventionalcommits.org/).
+## Setup
 
-## Getting started
+To install the plugin simply clone this repository to your Grafana's plugins directory. It's located at `{grafana}/data/plugins`.
 
-1. Install dependencies
 
-    ```bash
-    yarn install
-    ```
+## Features
 
-2. Start development
+- Pre-defined metrics
+- Ad-Hoc filter for dashboard
+- Filter for metric
 
-    1. Build plugin in development mode or run in watch mode
+## Devlopment
 
-        ```bash
-        yarn dev
-        ```
-
-        or
-
-        ```bash
-        yarn watch
-        ```
-
-    2. Start local Grafana for development
-
-        ```bash
-        docker-compose up
-
-        # URL: http://localhost:3000
-        # Default user and password are admin
-        ```
-
-3. Build plugin in production mode
-
-    ```bash
-    yarn build
-    ```
-
-## Server APIs
-
-`:spaceId` is Workspace ID.
-
-### `GET` - `/api/v1/:spaceId/health`
-
-- Authorization: `Bearer JWT.Token`
-
-For test DataSource.
-
-### `GET` - `/api/v1/:spaceId/metrics`
-
-- Authorization: `Bearer JWT.Token`
-
-Get available metrics.
-
-### `POST` - `/api/v1/:spaceId/query`
-
-- Content-Type: `application/json`
-- Authorization: `Bearer JWT.Token`
-
-```js
-// Grafana `DataQueryRequest` payload
-```
-
-Do a panel query.
-
-### `POST` - `/api/v1/:spaceId/tag-keys`
-
-- Content-Type: `application/json`
-- Authorization: `Bearer JWT.Token`
-
-Get available adhoc filter keys.
-
-### `POST` - `/api/v1/:spaceId/tag-values`
-
-- Content-Type: `application/json`
-- Authorization: `Bearer JWT.Token`
-
-```json
-{
-    "key": "string"
-}
-```
-
-Get available adhoc filter values.
+See [docs](https://github.com/mybigday/activity-log-grafana-plugin/blob/master/DEVELOPMENT.md)

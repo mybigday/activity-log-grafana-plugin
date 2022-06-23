@@ -30,7 +30,12 @@
         "url": "https://github.com/mybigday/activity-log-grafana-plugin"
       }
     ],
-    "screenshots": [],
+    "screenshots": [
+      { "name": "Config", "path": "src/img/screenshot/1.png" },
+      { "name": "Event Count", "path": "src/img/screenshot/2.png" },
+      { "name": "LocalSync Latency", "path": "src/img/screenshot/3.png" },
+      { "name": "Event Log With Filter", "path": "src/img/screenshot/4.png" }
+    ],
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },

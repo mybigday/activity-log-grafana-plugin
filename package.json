@@ -13,7 +13,7 @@
     "lint:fix": "yarn run lint --fix",
     "prettier": "prettier --list-different \"**/*.{ts,tsx,scss}\"",
     "prettier:fix": "yarn run prettier --write",
-    "make-changelog": "changelog -x ci,test,docs,chore",
+    "make-changelog": "changelog -x ci,test,chore",
     "release:major": "yarn make-changelog -M && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --major && git push origin && git push origin --tags",
     "release:minor": "yarn make-changelog -m && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --minor && git push origin && git push origin --tags",
     "release:patch": "yarn make-changelog -p && git add CHANGELOG.md && git commit -m 'docs(changelog): update CHANGELOG' && yarn version --patch && git push origin && git push origin --tags"
