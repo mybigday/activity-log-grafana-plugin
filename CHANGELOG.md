@@ -1,3 +1,9 @@
+#### 1.1.1 (2022-06-23)
+
+##### Documentation Changes
+
+*  add screenshot and user guides (d6e61bfb)
+
 ### 1.1.0 (2022-06-13)
 
 ##### New Features
