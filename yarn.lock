@@ -1461,7 +1461,7 @@
   resolved "https://registry.yarnpkg.com/@grafana/aws-sdk/-/aws-sdk-0.0.36.tgz#60fa54e98c29c2f94db844966824aec4f8a77549"
   integrity sha512-Vtj8WXKI52R4wLfbDASbHWTfgnG7XG1cgKsibAl5hT1BWKqs5chW3zRzpjo4xOqaBDCsweMwLlF/wWzlg1vrFQ==
 
-"@grafana/data@9.0.4", "@grafana/data@^9.0.1":
+"@grafana/data@9.0.4":
   version "9.0.4"
   resolved "https://registry.yarnpkg.com/@grafana/data/-/data-9.0.4.tgz#1b69b56ed1dead96cf666fb8846f69d028f12e7e"
   integrity sha512-yVhOROalw16FO/uOGC5t1w5p1+w+cWrmZBrgVSJX4ZXrdCVwhZD2G+JDTLX0qraOZZkFFFOz4gXh1gj/UL6xxA==
@@ -1486,10 +1486,44 @@
     uplot "1.6.22"
     xss "1.0.11"
 
+"@grafana/data@9.0.7", "@grafana/data@^9.0.1":
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/@grafana/data/-/data-9.0.7.tgz#bc08918d0d9dc508445f807cea1b628f537393c1"
+  integrity sha512-y+malr/8VSYGhzWMv79BP9qaza9TSruJMmo5zVogIgLK4a+Br5nT/R95h32FLx87IlvJ0E2bvTeRVT/oX5AA2Q==
+  dependencies:
+    "@braintree/sanitize-url" "6.0.0"
+    "@grafana/schema" "9.0.7"
+    "@types/d3-interpolate" "^1.4.0"
+    d3-interpolate "1.4.0"
+    date-fns "2.28.0"
+    eventemitter3 "4.0.7"
+    lodash "4.17.21"
+    marked "4.0.16"
+    moment "2.29.4"
+    moment-timezone "0.5.34"
+    ol "6.14.1"
+    papaparse "5.3.2"
+    react "17.0.2"
+    react-dom "17.0.2"
+    regenerator-runtime "0.13.9"
+    rxjs "7.5.5"
+    tslib "2.4.0"
+    uplot "1.6.22"
+    xss "1.0.11"
+
 "@grafana/e2e-selectors@9.0.4":
   version "9.0.4"
   resolved "https://registry.yarnpkg.com/@grafana/e2e-selectors/-/e2e-selectors-9.0.4.tgz#3a6d36c4c5cd3ce9f7347b58b789f9467795b439"
   integrity sha512-tji/8hNdTT8MJZ2F5Ltt9c7lY+qHzZXuqjMW8r8aIHYL3kFNIj9BbclLiAfMYDnCpmEv+a2MLUCTdSuU3XXutQ==
+  dependencies:
+    "@grafana/tsconfig" "^1.2.0-rc1"
+    tslib "2.4.0"
+    typescript "4.6.4"
+
+"@grafana/e2e-selectors@9.0.7":
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/@grafana/e2e-selectors/-/e2e-selectors-9.0.7.tgz#2537e0066ea82f134f30aabbb3f4b8d509f51436"
+  integrity sha512-ed+RqIrCRgNZB1rV9MeuVABrg/rZRqvCnZKpkd/QHJG220fuvAJ/OFtMPGTFqV0+vfJjRRAXHi87HW1EvTVocQ==
   dependencies:
     "@grafana/tsconfig" "^1.2.0-rc1"
     tslib "2.4.0"
@@ -1530,6 +1564,13 @@
   version "9.0.4"
   resolved "https://registry.yarnpkg.com/@grafana/schema/-/schema-9.0.4.tgz#654734e9052c79b161e05aaf5d35532650b6a396"
   integrity sha512-EbU+Jdx7zQBdnVc/gmaFNiW5HEyBl0Ibv30s1VBir6Fzg58aCR2Ls5i8xBR5tWjyUIDSQ0aNcE8Gm2oPKPjc1A==
+  dependencies:
+    tslib "2.4.0"
+
+"@grafana/schema@9.0.7":
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/@grafana/schema/-/schema-9.0.7.tgz#653ca143600714de784509ab0a955d084f56737c"
+  integrity sha512-TBVT0EsksBRimsv7Luu754rbO632JsV1dNJa9CtN74nms+fJjgHoM0VB73tUzGQgswsBQvBjMn+87RAClgs1Zg==
   dependencies:
     tslib "2.4.0"
 
@@ -1653,7 +1694,7 @@
   resolved "https://registry.yarnpkg.com/@grafana/tsconfig/-/tsconfig-1.2.0-rc1.tgz#10973c978ec95b0ea637511254b5f478bce04de7"
   integrity sha512-+SgQeBQ1pT6D/E3/dEdADqTrlgdIGuexUZ8EU+8KxQFKUeFeU7/3z/ayI2q/wpJ/Kr6WxBBNlrST6aOKia19Ag==
 
-"@grafana/ui@9.0.4", "@grafana/ui@^9.0.1":
+"@grafana/ui@9.0.4":
   version "9.0.4"
   resolved "https://registry.yarnpkg.com/@grafana/ui/-/ui-9.0.4.tgz#8bf0f4ac75316c088dc790f1578dc105cf992b89"
   integrity sha512-oiTLqJC75OZ4BeCCORs6JLyJkyAw6X0NEgLMYUwwxi/Izx2YTa/RIMUSm/z/DiSl/lvMEMckHj/aZJh+oMjMpQ==
@@ -1687,6 +1728,74 @@
     lodash "4.17.21"
     memoize-one "6.0.0"
     moment "2.29.3"
+    monaco-editor "^0.31.1"
+    ol "6.14.1"
+    prismjs "1.28.0"
+    rc-cascader "3.5.0"
+    rc-drawer "4.4.3"
+    rc-slider "9.7.5"
+    rc-time-picker "^3.7.3"
+    react "17.0.2"
+    react-beautiful-dnd "13.1.0"
+    react-calendar "3.7.0"
+    react-colorful "5.5.1"
+    react-custom-scrollbars-2 "4.4.0"
+    react-dom "17.0.2"
+    react-dropzone "12.0.4"
+    react-highlight-words "0.18.0"
+    react-hook-form "7.5.3"
+    react-inlinesvg "2.3.0"
+    react-popper "2.3.0"
+    react-popper-tooltip "^4.3.1"
+    react-router-dom "^5.2.0"
+    react-select "5.3.2"
+    react-select-event "^5.1.0"
+    react-table "7.8.0"
+    react-transition-group "4.4.2"
+    react-use "17.3.2"
+    react-window "1.8.7"
+    rxjs "7.5.5"
+    slate "0.47.8"
+    slate-plain-serializer "0.7.10"
+    tinycolor2 "1.4.2"
+    tslib "2.4.0"
+    uplot "1.6.22"
+    uuid "8.3.2"
+
+"@grafana/ui@^9.0.7":
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/@grafana/ui/-/ui-9.0.7.tgz#c6892983ec477bf790b2660743dbada736caca37"
+  integrity sha512-eFlqd1CLEYgQvMktWLBwzbkfEl/NNWWUpjSIsKoBfknWMlYlrIPxL0Cp+XwTgtTqXmaABzozeK8VRtfVM8Jx0w==
+  dependencies:
+    "@emotion/css" "11.9.0"
+    "@emotion/react" "11.9.0"
+    "@grafana/aws-sdk" "0.0.36"
+    "@grafana/data" "9.0.7"
+    "@grafana/e2e-selectors" "9.0.7"
+    "@grafana/schema" "9.0.7"
+    "@grafana/slate-react" "0.22.10-grafana"
+    "@monaco-editor/react" "4.3.1"
+    "@popperjs/core" "2.11.5"
+    "@react-aria/button" "3.4.4"
+    "@react-aria/dialog" "3.1.9"
+    "@react-aria/focus" "3.5.5"
+    "@react-aria/menu" "3.4.4"
+    "@react-aria/overlays" "3.8.2"
+    "@react-stately/menu" "3.2.7"
+    "@sentry/browser" "6.19.7"
+    ansicolor "1.1.100"
+    calculate-size "1.1.1"
+    classnames "2.3.1"
+    core-js "3.22.5"
+    d3 "5.15.0"
+    date-fns "2.28.0"
+    hoist-non-react-statics "3.3.2"
+    immutable "4.0.0"
+    is-hotkey "0.2.0"
+    jquery "3.6.0"
+    lodash "4.17.21"
+    memoize-one "6.0.0"
+    moment "2.29.4"
     monaco-editor "^0.31.1"
     ol "6.14.1"
     prismjs "1.28.0"
@@ -7212,10 +7321,15 @@ moment-timezone@0.5.34:
   dependencies:
     moment ">= 2.9.0"
 
-moment@2.29.3, moment@2.x, "moment@>= 2.9.0":
+moment@2.29.3:
   version "2.29.3"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.3.tgz#edd47411c322413999f7a5940d526de183c031f3"
   integrity sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==
+
+moment@2.29.4, moment@2.x, "moment@>= 2.9.0":
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 monaco-editor@^0.31.1:
   version "0.31.1"
