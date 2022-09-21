@@ -24,7 +24,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@grafana/data": "^9.0.1",
-    "@grafana/runtime": "^9.1.2",
+    "@grafana/runtime": "^9.1.6",
     "@grafana/toolkit": "^9.0.4",
     "@grafana/ui": "^9.0.1",
     "@testing-library/jest-dom": "5.16.5",
